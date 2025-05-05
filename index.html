@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Governemnt firings and endangered animals</title>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-size: 20px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-rendering: optimizeLegibility;
+    }
+
+    .content {
+      max-width: 640px;
+      margin: auto;
+    }
+
+    .header {
+      padding: 3em 0;
+    }
+
+    a {
+      color: #f05349;
+    }
+
+    .footer {
+      background: #f4f4f4;
+      text-align: center;
+      font-size: 0.8em;
+      margin-top: 4em;
+      padding: 4em 0;
+    }
+
+    figure {
+      margin: 0;
+      padding-bottom: 1.2em;
+    }
+
+    figcaption {
+      font-size: 0.8em;
+      text-align: center;
+      margin-top: 0.5em;
+      color: #666;
+    }
+
+    h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: bold;
+      font-size: 3em;
+      line-height: 1.1;
+    }
+
+    .subhead {
+      font-family: 'Lora', Georgia, serif;
+    }
+
+    iframe,
+    img,
+    video {
+      max-width: 100%;
+    }
+
+    p {
+      line-height: 1.6;
+      margin: 0;
+      padding-bottom: 1.2em;
+    }
+
+    ul {
+      margin: 0;
+      padding-bottom: 1em;
+      line-height: 1.6;
+    }
+
+    iframe {
+      padding-bottom: 1.2em;
+    }
+
+    .full-width figure {
+      text-align: center;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      background: #fff880;
+    }
+
+    /* margin on mobile */
+    @media (max-width: 640px) {
+      body {
+        font-size: 18px;
+      }
+
+      .content {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+      }
+      .full-width figure {
+            text-align: center;
+        }
+
+        iframe,
+        img,
+        video {
+            max-width: 100%;
+        }
+
+        p {
+            line-height: 1.6;
+            margin: 0;
+            padding-bottom: 1.2em;
+        }
+
+        ul {
+            margin: 0;
+            padding-bottom: 1em;
+            line-height: 1.6;
+        }
+
+        iframe {
+            padding-bottom: 1.2em;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background: #fff880;
+        }
+
+        /* margin on mobile */
+        @media (max-width: 640px) {
+            body {
+                font-size: 18px;
+            }
+
+            .content {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+        }
+    </style>
+    <style>
+        .with-image-bg,
+        .with-video-bg {
+            position: relative;
+            background-size: cover;
+            margin-bottom: 2em;
+
+            /* Center everything inside */
+            min-height: 70svh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            text-shadow: 0px 0px 30px black,
+                0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .with-image-bg {
+            background-image: url('sea_turtle.jpg');
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .video-background video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        
+
+        .scrolly-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .sticky-thing {
+      position: sticky;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      z-index: 0;
+    }
+
+    .sticky-thing img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .steps-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .step {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step p {
+      background-color: rgba(207, 243, 243, 0.338);
+      padding: 2em;
+      font-size: 1.5em;
+      max-width: 600px;
+      text-align: center;
+      font-weight: bold;
+      color: black;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    .caption {
+  margin-top: 1em;
+  font-size: 0.9em;
+  color: #222;
+  font-weight: normal;
+}
+.text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(207, 243, 243, 0.338); /* match your transparent box */
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+.methodology-box {
+  background-color: #f8f8f8;
+  border-left: 5px solid #aaa;
+  padding: 1em 1.5em;
+  margin: 4em auto 2em auto;
+  font-size: 0.85em;
+  max-width: 700px;
+  line-height: 1.5;
+  color: #333;
+}
+.methodology-box h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+  color: #555;
+}
+
+}
+
+  </style>
+  <link href="scrolly-styles.css" rel="stylesheet">
+  <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+</head>
+
+<body>
+
+  <div class="header with-image-bg">
+    <div class="content">
+        <h1>Several employees were fired from the services under the Department of Interior as the number of endangered species is still on the rise</h1>
+        <p class="subhead">More than 2,000 employees were fired from the Department of Interior which affects several programs, including programs for parks, endangered animals and water resources. This is as endangered species count is still on the rise.</p>
+    </div>
+</div>
+ 
+<div class="content">
+  <div class="byline">
+      <p>By <a href="https://jcw2245.github.io/Portfolio/">Jaylynn Ward</a></p>
+  </div>
+  <p>Several people from the programs under the U.S. The Department of Interior has been fired due to the Trump Administration in February leaving these workplaces depleted from resources they need, including endangered animals and other species.</p>
+  <p>The U.S. Fish and Wildlife Service takes care of endangered species. This department received 370 terminations. According to the National Wildlife Refuge Association, many were working for the National Wildlife Refuge System, which serves protected areas in the U.S. This includes these species. These workplaces were already experiencing stress from their workload before the terminations.</p>
+  <p> The U.S. Fish and Wildlife Services works with public and private landowners to develop conservation initiatives and habitats. They also classify species when needed to the deferral list of endangered species. This falls under the Endangered Species Act, which also prohibits killing and harming these listed species. The work of this department is to make these species thrive where they do not need federal protection.</p>
+  <p>According to the National Wildlife Refuge Association, America currently has 573 national wildlife refuges.</p>
+  <p>Each year, the IUCN Red List of Threatened Species takes the number of classified species per year since 1996. The charts below display what was classified in different categories for 2025.</p>
+
+  <div style="min-height:449px" id="datawrapper-vis-DFZZb"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/DFZZb/embed.js" charset="utf-8" data-target="#datawrapper-vis-DFZZb"></script><noscript><img src="https://datawrapper.dwcdn.net/DFZZb/full.png" alt="" /></noscript></div>
+  <p>  </p>
+  <p>  </p>
+
+<div style="min-height:412px" id="datawrapper-vis-WvR2B"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/WvR2B/embed.js" charset="utf-8" data-target="#datawrapper-vis-WvR2B"></script><noscript><img src="https://datawrapper.dwcdn.net/WvR2B/full.png" alt="" /></noscript></div>
+<p>  </p>
+<p>  </p>
+<p>Endangered species become this status for various reasons. This includes human activities like deforestation, urbanization, agricultural practices, hunting and poaching practices,  pollution and climate change. This also includes natural factors like natural disasters, disease and lack of genetic diversity.</p>
+<p>Below are some species in North America that are currently experiencing classification as endangered.</p>
+</div>
+
+  <section id="scrolly-images" class="scrolly-container">
+    <div class="sticky-thing">
+      <img id="scrolly-image" src="flower.jpg" alt="Background Image" />
+    </div>
+    <div class="steps-container">
+      <div class="step" id="step1">
+        <div class="text-block">
+          <p>Hawaiian White Hibiscus is native to Hawaii and has a variety of uses. It is known for its decoration and symbolism, but also has been used in ailments and in tea for health benefits.</p>
+          <div class="caption">Photo by Nataliya Vaitkevich</div>
+        </div>
+      </div>
+      
+      <div class="step" id="step2">
+        <div class="text-block">
+          <p>Monarch butterflies are vital in pollination. They pollinate many plants that are food and resources. They are also a food source for animals.</p>
+          <div class="caption">Photo by Pixabay</div>
+        </div>
+      </div>
+      
+      <div class="step" id="step3">
+        <div class="text-block">
+          <p>Whooping cranes are ecological indicators for the wetland habitats. They also are a vital role in the food chain system for these habitats.</p>
+          <div class="caption">Photo by Klub Boks</div>
+        </div>
+      </div>
+      
+      <div class="step" id="step4">
+        <div class="text-block">
+          <p>Red wolves hunt small mammals that include raccoons, rabbits and deer, which help regulate populations to stop overgrazing and overpopulation of their prey.</p>
+          <div class="caption">Photo by Steve McCaul</div>
+        </div>
+      </div>
+      
+      <div class="step" id="step5">
+        <div class="text-block">
+          <p>Humpback whales remove carbon dioxide from the atmosphere and bring nutrient-rich water to the surface, which helps with other species' growth. </p>
+          <div class="caption">Photo by Jane Doe on Unsplash</div>
+        </div>
+      </div>
+      
+  </section>
+  
+
+  <div class="content">
+    <div class="byline">
+        <p>By <a href="https://jcw2245.github.io/Portfolio/">Jaylynn Ward</a></p>
+    </div>
+
+    <div class="methodology-box">
+      <h3>Methodology</h3>
+      <p>
+        For this article, I used data from scientific articles to understand the numbers of endangered species counts and the differences from 1996 - 2025. Because of some of the numbers differing because of both the animals and other species being affected, but also the different laws and programs around the world, I decided to stick to the 2025 numbers while expressing that there are rising numbers for various reasons.</p>
+      <p>For the data on the ones that were delisted as endangered by the U.S. Fish and Wildlife Service, I scraped the website to get all the information possible about these species. I also had to note that the species were delisted before Jan. 20 and it was archived after the new administration came into office. </p>
+    </div>
+</div>
+<script>
+  const scroller = scrollama();
+
+  scroller
+    .setup({
+      parent: document.querySelector("#scrolly-images"),
+      step: ".step",
+      offset: 0.6,
+      debug: false
+    })
+    .onStepEnter(({ index }) => {
+      const images = [
+        "flower.jpg",
+        "butterfly.jpg",
+        "crane.jpg",
+        "fox.jpg",
+        "whale.jpg"
+      ];
+      document.getElementById("scrolly-image").src = images[index];
+    });
+
+  window.addEventListener("resize", scroller.resize);
+</script>
+<style>
+  
+</style>
+
+</body>
+
+</html>
