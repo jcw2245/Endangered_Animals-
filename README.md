@@ -1,4 +1,4 @@
-### Endangered_Animals-Article
+## Endangered_Animals-Article
  
  For this assignment I wanted to do a scientific topic with the article and focused on the firing that have happened within the U.S. government. I wanted to highlight a topic that I have not seen in the news about the firing within the Department of Interior, which is the effect on endangered species. 
 
